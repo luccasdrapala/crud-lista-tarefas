@@ -7,7 +7,7 @@
         }
 
         public function recuperar() { //read
-
+            
         }
 
         public function atualizar() { //update
