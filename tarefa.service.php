@@ -21,6 +21,10 @@
 
         public function recuperar() { //read
             
+            $query = 'select id, id_status, tarefa from tb_tarefas';
+            $stmt = $this->conexao->prepare($query);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
         }
 
         public function atualizar() { //update
