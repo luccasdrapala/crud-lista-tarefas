@@ -19,7 +19,7 @@
 	
 		<script>
 
-			function editar(id) {
+			function editar(id, txt_tarefa) {
 				
 				//criar u form e edição
 				let form = document.createElement('form')
@@ -32,6 +32,13 @@
 				inputTarefa.type = 'text'
 				inputTarefa.type = 'name'
 				inputTarefa.className = 'col-9 form-control'
+				inputTarefa.value = txt_tarefa
+
+				//criar um input hidden para guardar o ID da tarefa
+				let inputId = document.createElement('input')
+				inputId.type = 'hidden'
+				inputId.name = 'id'
+				inputId.value = id
 
 				//criar um button
 				let button = document.createElement('button')
@@ -40,6 +47,7 @@
 				button.innerHTML = 'Atualizar'
 
 				form.appendChild(inputTarefa)
+				form.appendChild(inputId)
 				form.appendChild(button)
 
 				//limpar o texto da tarefa
@@ -48,6 +56,9 @@
 
 				//incluir form na página
 				tarefa.insertBefore(form, tarefa[0])
+
+				//incluir input ID (hidden) no form
+				form.appendChild(button)
 			}
 
 		</script>
@@ -88,7 +99,7 @@
 										</div>
 										<div class="col-sm-3 mt-2 d-flex justify-content-between">
 										<i class="fas fa-trash-alt fa-lg text-danger"></i>
-										<i class="fas fa-edit fa-lg text-info" onclick="editar(<?=$tarefa->id?>)"></i>
+										<i class="fas fa-edit fa-lg text-info" onclick="editar(<?=$tarefa->id?>,'<?= $tarefa->tarefa ?>')"></i>
 										<i class="fas fa-check-square fa-lg text-success"></i>
 										</div>
 									</div>
