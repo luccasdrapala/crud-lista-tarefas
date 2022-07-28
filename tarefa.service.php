@@ -34,7 +34,7 @@
         }
 
         public function atualizar() { //update
-            
+            print_r($this->tarefa);
         }
 
         public function remover() { //delete
