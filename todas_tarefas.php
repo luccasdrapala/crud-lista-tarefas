@@ -23,14 +23,14 @@
 				
 				//criar u form e edição
 				let form = document.createElement('form')
-				form.action = '#'
+				form.action = 'tarefa.controller.php?acao=atualizar'
 				form.method = 'post'
 				form.className = 'row'
 
 				//criar um input para entrada de texto
 				let inputTarefa = document.createElement('input')
 				inputTarefa.type = 'text'
-				inputTarefa.type = 'name'
+				inputTarefa.name = 'tarefa'
 				inputTarefa.className = 'col-9 form-control'
 				inputTarefa.value = txt_tarefa
 
