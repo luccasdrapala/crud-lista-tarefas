@@ -35,7 +35,7 @@
         $conexao = new Conexao();
         $tarefaService = new TarefaService($conexao, $tarefa);
 
-        $tarefaService->atualizar();
+        echo $tarefaService->atualizar();
         
     }
 ?>
