@@ -5,7 +5,7 @@
     require "../../app_lista_tarefas/conexao.php"; 
 
     $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
-
+    
     if($acao == 'inserir') {
 
         $tarefa = new Tarefa();
