@@ -6,8 +6,8 @@
 	
 
 ?>
-
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,7 +63,9 @@
 
 			//funcao do botão remover tarefa
 			function remover(id) {
-				location.href = 'todas_tarefas.php?acao=remover&id='+id
+				navigator.userAgentData
+				console.log(id)
+				window.location.href = 'todas_tarefas.php?acao=remover&id='+id
 			}
 
 		</script>
