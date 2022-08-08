@@ -4,7 +4,6 @@
 	require 'tarefa.controller.php';
 	//print_r($tarefas);
 	
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -63,9 +62,13 @@
 
 			//funcao do botão remover tarefa
 			function remover(id) {
-				navigator.userAgentData
 				console.log(id)
-				window.location.href = 'todas_tarefas.php?acao=remover&id='+id
+				location.href = 'nova_tarefa.php?acao=remover&id='+ id;
+
+				//request
+
+				request = new XMLHTTP
+
 			}
 
 		</script>
